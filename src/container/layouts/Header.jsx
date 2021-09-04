@@ -1,14 +1,17 @@
 import "./Header.css";
+import { Link } from "react-router-dom";
 
 function Header() {
     return (
         <div className="header w-full h-16 px-6 md:px-10 flex items-center justify-between">
             <div className="flex items-center">
-                <img
-                    src="https://github.githubassets.com/favicons/favicon-dark.svg"
-                    alt="Github logo"
-                    className="cursor-pointer"
-                />
+                <Link to="/">
+                    <img
+                        src="https://github.githubassets.com/favicons/favicon-dark.svg"
+                        alt="Github logo"
+                        className="cursor-pointer"
+                    />
+                </Link>
 
                 <input
                     type="text"
@@ -17,13 +20,16 @@ function Header() {
                 />
 
                 <div className="flex items-center">
-                    <p className="px-6 text-gray-300 font-medium hover:text-gray-500 cursor-pointer">
+                    <Link
+                        to="/"
+                        className="px-6 text-gray-300 font-medium hover:text-gray-500 cursor-pointer"
+                    >
                         Home
-                    </p>
+                    </Link>
 
-                    <p className="hidden md:block text-gray-300 font-medium hover:text-gray-500 cursor-pointer">
+                    <Link className="hidden md:block text-gray-300 font-medium hover:text-gray-500 cursor-pointer">
                         About
-                    </p>
+                    </Link>
                 </div>
             </div>
 
