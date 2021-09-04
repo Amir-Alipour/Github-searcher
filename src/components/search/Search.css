@@ -1,5 +1,5 @@
 .search__container {
-    height: 400px;
+    height: 300px;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -7,7 +7,7 @@
 }
 
 .search__box {
-    margin-top: 20px;
+    margin-top: 50px;
     padding: 0 50px;
     display: flex;
     align-items: center;
