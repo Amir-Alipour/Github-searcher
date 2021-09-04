@@ -1,0 +1,43 @@
+.search__container {
+    height: 400px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.search__box {
+    margin-top: 20px;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search__inp {
+    width: 60%;
+    height: 45px;
+    background-color: #2d333b;
+    border-radius: 1000px;
+    outline: none;
+    color: rgba(255, 255, 255, 0.671);
+    padding: 5px 15px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .search__inp {
+      width: 70%;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    .search__inp {
+      width: 80%;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .search__inp {
+      width: 100%;
+    }
+}
