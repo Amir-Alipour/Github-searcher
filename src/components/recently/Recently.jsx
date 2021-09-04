@@ -1,19 +1,36 @@
-import './Recently.css'
-import RecentlyProfile from './RecentlyProfile'
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { selectAllRecently } from "../../features/recently/recentlySlice";
+import "./Recently.css";
+import RecentlyProfile from "./RecentlyProfile";
 
 function Recently() {
-    return (
-        <div className="container mt-10 text-white">
-            <p className="h3 text-gray-300">- Recently</p>
+    const recently = useSelector(selectAllRecently);
+    const [, forceUpdate] = useState(1);
 
-            <div className="container-fluid mt-2">
-                <div className="row">
-                    <RecentlyProfile />
-                    <RecentlyProfile />
+    useEffect(() => {
+        forceUpdate(p => p + 1);
+    }, [recently])
+
+    return (
+        <>
+            {recently.length > 0 && (
+                <div className="container mt-10 text-white">
+                    <p className="h3 text-gray-300">- Recently</p>
+
+                    <div className="container-fluid mt-2">
+                        <div className="row">
+                            {
+                                recently.map((rec, index) => (
+                                    index < 6 && <RecentlyProfile key={rec.node_id} avatar={rec.avatar_url} username={rec.login} />
+                                ))
+                            }
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    )
+            )}
+        </>
+    );
 }
 
-export default Recently
+export default Recently;

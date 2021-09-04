@@ -27,9 +27,9 @@ function Header() {
                         Home
                     </Link>
 
-                    <Link className="hidden md:block text-gray-300 font-medium hover:text-gray-500 cursor-pointer">
+                    <p className="hidden md:block text-gray-300 font-medium hover:text-gray-500 cursor-pointer">
                         About
-                    </Link>
+                    </p>
                 </div>
             </div>
 
