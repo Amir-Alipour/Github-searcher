@@ -1,4 +1,14 @@
 .profile__container {
-    min-height: 85vh;
+    min-height: 80vh;
     color: white;
+}
+
+.repos_container {
+    height: 70vh;
+}
+
+@media only screen and (max-width: 1000px) {
+    .repos_container {
+      height: 100vh;
+    }
 }

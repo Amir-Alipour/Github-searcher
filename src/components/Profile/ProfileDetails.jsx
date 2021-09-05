@@ -1,9 +1,15 @@
-import moment from 'moment';
+import moment from "moment";
 
-function ProfileDetails({profile}) {
+function ProfileDetails({ profile }) {
 
     return (
-        <div className="w-full shadow rounded container-fluid p-3" style={{minHeight: "400px", border: "1px solid rgba(255,255,255,0.2)"}}>
+        <div
+            className="w-full shadow rounded container-fluid p-3"
+            style={{
+                minHeight: "400px",
+                border: "1px solid rgba(255,255,255,0.2)",
+            }}
+        >
             <div className="row mt-2">
                 <div className="col-12 col-md-6">
                     <p>Bio : {profile.bio}</p>
@@ -54,7 +60,7 @@ function ProfileDetails({profile}) {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default ProfileDetails
+export default ProfileDetails;

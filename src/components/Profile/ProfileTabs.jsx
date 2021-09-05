@@ -42,8 +42,8 @@ function ProfileTabs({profile}) {
             >
                 <Tab label={`Details`} />
                 <Tab label={`Repository ${profile.public_repos}`} />
-                <Tab label={`Following ${profile.following}`} />
-                <Tab label={`Followres ${profile.followers}`} />
+                <Tab label={`Following`} />
+                <Tab label={`Followres`} />
             </Tabs>
             <TabPanel value={tab} index={0}>
                 <ProfileDetails profile={profile} />

@@ -1,7 +1,10 @@
 import { useLayoutEffect, useState } from "react"
+import { useHistory } from "react-router";
 import Api from '../../utils/AxiosConfig';
 
 function SuggestProfile({avatar, username}) {
+    const history = useHistory();
+
     const [following, setFollwing] = useState();
     const [follwer, setFollwer] = useState();
     const [repos, setRepos] = useState();
@@ -19,6 +22,7 @@ function SuggestProfile({avatar, username}) {
             <div
                 className="w-full h-full rounded p-2 cursor-pointer"
                 style={{ backgroundColor: "#2d333b" }}
+                onClick={() => history.push(`/${username}`)}
             >
                 <div className="flex ">
                     <img

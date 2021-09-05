@@ -87,6 +87,11 @@ function Profile() {
                             <h3 className="h5 mt-2 text-gray-400">
                                 {profile.login}
                             </h3>
+
+                            <div className="flex text-gray-500">
+                                <p>{profile.followers} followers</p>
+                                <p className="ml-3">{profile.following} following</p>
+                            </div>
                         </div>
                         <div className="col-12 col-lg-8 h-32">
                             <ProfileTabs profile={profile} />
