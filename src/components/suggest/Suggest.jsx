@@ -23,8 +23,8 @@ function Suggest() {
                 <div className="row">
                     {
                         suggest.length > 0 && (
-                            suggest.map(sug => (
-                                <SuggestProfile key={sug.node_id} avatar={sug.avatar_url} username={sug.login} />
+                            suggest.map((sug, index) => (
+                                index < 6 && <SuggestProfile key={sug.node_id} avatar={sug.avatar_url} username={sug.login} />
                             ))
                         )
                     }

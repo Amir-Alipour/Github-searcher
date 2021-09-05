@@ -1,7 +1,21 @@
 import "./Header.css";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useHistory } from "react-router";
+
 
 function Header() {
+    const history = useHistory();
+
+    const [username, setUsername] = useState("");
+
+    const handleSearch = (e) => {
+        if(e.keyCode === 13) {
+            history.push(`/${username}`)
+            setUsername("");
+        }
+    } 
+
     return (
         <div className="header w-full h-16 px-6 md:px-10 flex items-center justify-between">
             <div className="flex items-center">
@@ -17,6 +31,9 @@ function Header() {
                     type="text"
                     className="header__search"
                     placeholder="Search..."
+                    value={username}
+                    onChange={e => setUsername(e.target.value)}
+                    onKeyDown={handleSearch}
                 />
 
                 <div className="flex items-center">
