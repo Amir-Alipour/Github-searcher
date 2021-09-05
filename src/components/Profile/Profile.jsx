@@ -41,7 +41,7 @@ function Profile() {
     document.title = `GHS | ${username}`;
     return (
         <>
-            {profile && (
+            {profile && profile.login === username && (
                 <div className="container profile__container p-10">
                     <div className="row">
                         <div className="col-12 col-lg-4 flex items-center flex-column justify-center">
@@ -49,7 +49,7 @@ function Profile() {
                                 <img
                                     src={profile.avatar_url}
                                     className="w-72 rounded-full"
-                                    alt="profile"
+                                    alt={`${profile.login} Github Profile`}
                                     style={{
                                         border: "1px solid rgba(255,255,255,0.4)",
                                     }}
