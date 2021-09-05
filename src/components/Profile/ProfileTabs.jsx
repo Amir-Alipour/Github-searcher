@@ -1,4 +1,4 @@
-import { Box, Typography } from "@material-ui/core";
+import { Box } from "@material-ui/core";
 import Tab from "@material-ui/core/Tab";
 import Tabs from "@material-ui/core/Tabs";
 import { useState } from "react";
@@ -49,13 +49,13 @@ function ProfileTabs({profile}) {
                 <ProfileDetails profile={profile} />
             </TabPanel>
             <TabPanel value={tab} index={1}>
-                <ProfileRepository url={profile.repos_url} />
+                <ProfileRepository username={profile.login} />
             </TabPanel>
             <TabPanel value={tab} index={2}>
-                <ProfileFollowing url={profile.following_url} />
+                <ProfileFollowing username={profile.login} />
             </TabPanel>
             <TabPanel value={tab} index={3}>
-                <ProfileFollowers url={profile.followers_url} />
+                <ProfileFollowers username={profile.login} />
             </TabPanel>
         </div>
     );

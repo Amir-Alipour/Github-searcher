@@ -3,8 +3,8 @@ import moment from 'moment';
 function ProfileDetails({profile}) {
 
     return (
-        <div className="w-full shadow rounded container-fluid p-3" style={{minHeight: "300px", border: "1px solid rgba(255,255,255,0.3)"}}>
-            <div className="row">
+        <div className="w-full shadow rounded container-fluid p-3" style={{minHeight: "400px", border: "1px solid rgba(255,255,255,0.2)"}}>
+            <div className="row mt-2">
                 <div className="col-12 col-md-6">
                     <p>Bio : {profile.bio}</p>
                 </div>
