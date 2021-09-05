@@ -3,3 +3,9 @@
     min-height: 100vh;
     padding-bottom: 50px;
 }
+
+@media only screen and (max-width: 1000px) {
+    .App {
+      min-height: 200vh;
+    }
+  }

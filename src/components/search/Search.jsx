@@ -16,7 +16,7 @@ function Search() {
     document.title = "Github Searcher | Home"
     return (
         <div className="container search__container">
-            <h1 className="h1 text-white mt-7">Github Search</h1>
+            <h1 className="h1 text-white mt-5">Github Search</h1>
             <div className="search__box container h-20">
                 <input
                     type="text"

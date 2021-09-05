@@ -9,8 +9,8 @@ function Recently() {
     const [, forceUpdate] = useState(1);
 
     useEffect(() => {
-        forceUpdate(p => p + 1);
-    }, [recently])
+        forceUpdate((p) => p + 1);
+    }, [recently]);
 
     return (
         <>
@@ -20,11 +20,19 @@ function Recently() {
 
                     <div className="container-fluid mt-2">
                         <div className="row">
-                            {
-                                recently.map((rec, index) => (
-                                    index < 6 && <RecentlyProfile key={rec.node_id} avatar={rec.avatar_url} username={rec.login} />
-                                ))
-                            }
+                            {recently.map(
+                                (rec, index) =>
+                                    index < 6 && (
+                                        <RecentlyProfile
+                                            key={rec.node_id}
+                                            avatar={rec.avatar_url}
+                                            username={rec.login}
+                                            follower={rec.followers}
+                                            following={rec.following}
+                                            repos={rec.public_repos}
+                                        />
+                                    )
+                            )}
                         </div>
                     </div>
                 </div>

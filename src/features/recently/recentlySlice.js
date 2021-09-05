@@ -19,8 +19,8 @@ const recentlySlice = createSlice({
     initialState,
     reducers: {
         addRecently: (state, action) => {
-            state.entities[action.payload.id] = action.payload;
-            state.ids.push(action.payload.id);
+            state.entities[action.payload.node_id] = action.payload;
+            state.ids.push(action.payload.node_id);
         }
     },
     extraReducers: {},
