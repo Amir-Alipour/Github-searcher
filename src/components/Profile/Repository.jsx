@@ -1,4 +1,4 @@
-import { recomposeColor, Tooltip } from "@material-ui/core";
+import { Tooltip } from "@material-ui/core";
 import moment from "moment";
 
 const EyeIcon = () => (
