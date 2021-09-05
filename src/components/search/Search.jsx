@@ -13,6 +13,7 @@ function Search() {
         }
     } 
 
+    document.title = "Github Searcher | Home"
     return (
         <div className="container search__container">
             <h1 className="h1 text-white mt-7">Github Search</h1>

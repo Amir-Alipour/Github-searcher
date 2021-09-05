@@ -3,8 +3,8 @@ import { useParams } from "react-router"
 function Profile() {
     const params = useParams();
 
-    console.log(params);
-
+    
+    document.title = `GHS | ${params.username}`
     return (
         <div>
             

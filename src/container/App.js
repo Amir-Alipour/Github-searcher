@@ -17,7 +17,7 @@ function App() {
 
                     <Recently />
 
-                    {/* <Suggest /> */}
+                    <Suggest />
                 </Route>
 
                 <Route path="/:username">

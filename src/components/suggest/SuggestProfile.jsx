@@ -7,9 +7,11 @@ function SuggestProfile({avatar, username}) {
     const [repos, setRepos] = useState();
 
     useLayoutEffect(() => {
-        Api.get(`/users/${username}/followers`).then(res => setFollwer(res.length));
-        Api.get(`/users/${username}/following`).then(res => setFollwing(res.length));
-        Api.get(`/users/${username}/repos`).then(res => setRepos(res.length));
+        Api.get(`/users/${username}`).then(res => {
+            setFollwer(res.followers)
+            setFollwing(res.following)
+            setRepos(res.public_repos)
+        });
     }, [username])
 
     return (
@@ -29,9 +31,9 @@ function SuggestProfile({avatar, username}) {
                 </div>
 
                 <div className="mt-3 text-gray-300">
-                    <p>following : {following > 29 ? "more than 30" : following}</p>
-                    <p>follwer : {follwer > 29 ? "more than 30" : follwer}</p>
-                    <p>repository : {repos > 28 ? "more than 30" : repos}</p>
+                    <p>following : {following}</p>
+                    <p>follwer : {follwer}</p>
+                    <p>repository : {repos}</p>
                 </div>
             </div>
         </div>
