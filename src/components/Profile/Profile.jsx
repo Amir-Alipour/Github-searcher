@@ -1,5 +1,5 @@
 import "./Profile.css";
-import { useEffect, useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { useHistory, useParams } from "react-router";
@@ -17,6 +17,7 @@ function Profile() {
     const profile = useSelector((state) => state.profile.profile);
     const recently = useSelector(selectAllRecently);
     const haveError = useSelector((state) => state.profile.error);
+    const status = useSelector(state => state.profile.status);
 
     useLayoutEffect(() => {
         if (haveError) {
@@ -41,7 +42,7 @@ function Profile() {
     document.title = `GHS | ${username}`;
     return (
         <>
-            {profile && profile.login === username && (
+            {profile && status === "success" && (
                 <div className="container profile__container p-10">
                     <div className="row">
                         <div className="col-12 col-lg-4 flex items-center flex-column justify-center">

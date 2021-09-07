@@ -1,7 +1,6 @@
 import moment from "moment";
 
 function ProfileDetails({ profile }) {
-
     return (
         <div
             className="w-full shadow rounded container-fluid p-3"
@@ -57,6 +56,36 @@ function ProfileDetails({ profile }) {
 
                 <div className="col-12 col-md-6">
                     <p>Admin : {profile.site_admin ? "Yes" : "No"}</p>
+                </div>
+            </div>
+
+            <div className="row mt-3">
+                <div className="col-12 col-md-6">
+                    <p>
+                        Link :{" "}
+                        <a
+                            className="text-blue-400 hover:text-blue-400"
+                            href={profile.blog}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            {profile.blog}
+                        </a>
+                    </p>
+                </div>
+
+                <div className="col-12 col-md-6">
+                    <p>
+                        Github Repos :{" "}
+                        <a
+                            className="text-blue-400 hover:text-blue-400"
+                            href={`https://github.com/${profile.login}?tab=repositories`}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            {profile.name} repos
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>

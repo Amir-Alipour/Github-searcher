@@ -38,11 +38,10 @@ function ProfileTabs({profile}) {
     const [tab, setTab] = useState(0);
 
     useEffect(() => {
-        console.log(query.get("tab"));
         if(query.get("tab") !== null){
           setTab(parseInt(query.get("tab")));
         }
-    }, [])
+    }, [query])
     
     return (
         <div>
