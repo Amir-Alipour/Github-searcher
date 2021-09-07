@@ -42,7 +42,7 @@ function Profile() {
     document.title = `GHS | ${username}`;
     return (
         <>
-            {profile && status === "success" && (
+            {profile && status === "success" ? (
                 <div className="container profile__container p-10">
                     <div className="row">
                         <div className="col-12 col-lg-4 flex items-center flex-column justify-center">
@@ -99,6 +99,8 @@ function Profile() {
                         </div>
                     </div>
                 </div>
+            ) : (
+                <div>Loading ...!</div>
             )}
         </>
     );

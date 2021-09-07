@@ -27,6 +27,7 @@ function Recently() {
                                             key={rec.node_id}
                                             avatar={rec.avatar_url}
                                             username={rec.login}
+                                            name={rec.name}
                                             follower={rec.followers}
                                             following={rec.following}
                                             repos={rec.public_repos}
