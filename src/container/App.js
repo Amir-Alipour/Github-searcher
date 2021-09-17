@@ -14,7 +14,7 @@ function App() {
         <div className="App w-100 bg-gray-500">
             <Router>
                 <Suspense fallback={<h1>Loading...</h1>}>
-                    
+
                     <Header />
 
                     <Route path="/" exact>
@@ -22,7 +22,7 @@ function App() {
 
                         <Recently />
 
-                        {/* <Suggest /> */}
+                        <Suggest />
                     </Route>
 
                     <Route path="/about/me">
