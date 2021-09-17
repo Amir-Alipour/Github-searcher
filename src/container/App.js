@@ -1,28 +1,39 @@
+import {Suspense, lazy} from "react"
 import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from "./layouts/Header";
-import Search from "../components/search/Search";
-import Recently from "../components/recently/Recently";
-import Suggest from "../components/suggest/Suggest";
-import Profile from "../components/Profile/Profile";
+
+const Search = lazy(() => import("../components/search/Search"));
+const Recently = lazy(() => import("../components/recently/Recently"));
+const Suggest = lazy(() => import("../components/suggest/Suggest"));
+const Profile = lazy(() => import("../components/Profile/Profile"));
+const About = lazy(() => import("../components/about/About"));
 
 function App() {
     return (
         <div className="App w-100 bg-gray-500">
             <Router>
-                <Header />
+                <Suspense fallback={<h1>Loading...</h1>}>
+                    
+                    <Header />
 
-                <Route path="/" exact>
-                    <Search />
+                    <Route path="/" exact>
+                        <Search />
 
-                    <Recently />
+                        <Recently />
 
-                    {/* <Suggest /> */}
-                </Route>
+                        {/* <Suggest /> */}
+                    </Route>
 
-                <Route path="/:username">
-                    <Profile />
-                </Route>
+                    <Route path="/about/me">
+                        <About />
+                    </Route>
+
+                    <Route exact path="/:username">
+                        <Profile />
+                    </Route>
+
+                </Suspense>
             </Router>
         </div>
     );
