@@ -24,7 +24,7 @@ function Profile() {
 
     useLayoutEffect(() => {
         if (haveError) {
-            history.push("/Github-searcher");
+            history.push("/");
         }
     }, [history, haveError]);
 

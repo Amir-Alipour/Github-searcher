@@ -53,10 +53,10 @@ function ProfileTabs({profile}) {
                     setTab(newValue);
                 }}
             >
-                <Tab label={`Details`} onClick={() => history.replace(`/Github-searcher/${profile.login}`)} />
-                <Tab label={`Repository ${profile.public_repos}`} onClick={() => history.replace(`/Github-searcher/${profile.login}?tab=1`)} />
-                <Tab label={`Following`} onClick={() => history.replace(`/Github-searcher/${profile.login}?tab=2`)} />
-                <Tab label={`Followres`} onClick={() => history.replace(`/Github-searcher/${profile.login}?tab=3`)} />
+                <Tab label={`Details`} onClick={() => history.replace(`/${profile.login}`)} />
+                <Tab label={`Repository ${profile.public_repos}`} onClick={() => history.replace(`/${profile.login}?tab=1`)} />
+                <Tab label={`Following`} onClick={() => history.replace(`/${profile.login}?tab=2`)} />
+                <Tab label={`Followres`} onClick={() => history.replace(`/${profile.login}?tab=3`)} />
             </Tabs>
 
             <TabPanel value={tab} index={0}>

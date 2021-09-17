@@ -1,6 +1,6 @@
 import {Suspense, lazy} from "react"
 import "./App.css";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { HashRouter as Router, Route } from "react-router-dom";
 import Header from "./layouts/Header";
 
 const Search = lazy(() => import("../components/search/Search"));
@@ -17,7 +17,7 @@ function App() {
 
                     <Header />
 
-                    <Route path="/Github-searcher" exact>
+                    <Route path="/" exact>
                         <Search />
 
                         <Recently />
@@ -25,11 +25,11 @@ function App() {
                         <Suggest />
                     </Route>
 
-                    <Route path="/Github-searcher/about/me">
+                    <Route path="/about/me">
                         <About />
                     </Route>
 
-                    <Route exact path="/Github-searcher/:username">
+                    <Route exact path="/:username">
                         <Profile />
                     </Route>
 
