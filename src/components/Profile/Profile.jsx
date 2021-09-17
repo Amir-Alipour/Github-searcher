@@ -1,5 +1,5 @@
 import "./Profile.css";
-import { useEffect, useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { useHistory, useParams } from "react-router";
@@ -9,8 +9,11 @@ import {
     selectAllRecently,
 } from "../../features/recently/recentlySlice";
 import ProfileTabs from "./ProfileTabs";
+import LoadingBar from 'react-top-loading-bar';
 
 function Profile() {
+    const [progress ,setProgress] = useState(0);
+
     const { username } = useParams();
     const history = useHistory();
     const dispatch = useDispatch();
@@ -39,9 +42,27 @@ function Profile() {
         }
     }, [dispatch, profile, recently]);
 
+    useEffect(() => {
+        switch (status) {
+            case "idle":
+                setProgress(0);
+                break;
+            case "loading":
+                setProgress(50);
+                break;
+            case "success":
+                setProgress(100);
+                break;
+            default:
+                break;
+        }
+    }, [status])
+
     document.title = `GHS | ${username}`;
     return (
         <>
+            <LoadingBar color={"#137ef0"} progress={progress}
+                onLoaderFinished={() => setProgress(0)} />
             {profile && status === "success" ? (
                 <div className="container profile__container p-10">
                     <div className="row">

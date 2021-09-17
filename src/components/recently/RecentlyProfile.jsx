@@ -19,7 +19,7 @@ function RecentlyProfile({avatar, username, name, following, follower, repos}) {
 
                     <div>
                     <p className="ml-2 mt-2">{username}</p>
-                    <p className="ml-2 text-gray-500">{name}</p>
+                    <p className="ml-2 text-gray-500" style={{width: "120px",whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis"}}>{name}</p>
                     </div>
                 </div>
 
