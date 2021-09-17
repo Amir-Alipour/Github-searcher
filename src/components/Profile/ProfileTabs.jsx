@@ -58,6 +58,7 @@ function ProfileTabs({profile}) {
                 <Tab label={`Following`} onClick={() => history.replace(`/${profile.login}?tab=2`)} />
                 <Tab label={`Followres`} onClick={() => history.replace(`/${profile.login}?tab=3`)} />
             </Tabs>
+            
             <TabPanel value={tab} index={0}>
                 <ProfileDetails profile={profile} />
             </TabPanel>

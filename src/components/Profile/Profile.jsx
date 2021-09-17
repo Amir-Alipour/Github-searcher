@@ -1,5 +1,5 @@
 import "./Profile.css";
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { useHistory, useParams } from "react-router";

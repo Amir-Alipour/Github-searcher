@@ -16,7 +16,7 @@ function Recently() {
         <>
             {recently.length > 0 && (
                 <div className="container mt-10 text-white">
-                    <p className="h3 text-gray-300">- Recently</p>
+                    <p className="h3 text-gray-300">- Your Recent Searches</p>
 
                     <div className="container-fluid mt-2">
                         <div className="row">
