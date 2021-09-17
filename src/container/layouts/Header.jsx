@@ -44,9 +44,9 @@ function Header() {
                         Home
                     </Link>
 
-                    <p className="hidden md:block text-gray-300 font-medium hover:text-gray-500 cursor-pointer">
+                    <Link to="/about/me" className="hidden md:block text-gray-300 font-medium hover:text-gray-500 cursor-pointer">
                         About
-                    </p>
+                    </Link>
                 </div>
             </div>
 
