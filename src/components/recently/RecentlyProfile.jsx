@@ -8,7 +8,7 @@ function RecentlyProfile({avatar, username, name, following, follower, repos}) {
             <div
                 className="w-full h-full rounded-lg p-2 cursor-pointer shadow"
                 style={{ backgroundColor: "#2d333b" }}
-                onClick={() => history.push(`/${username}`)}
+                onClick={() => history.push(`/Github-searcher/${username}`)}
             >
                 <div className="flex">
                     <img

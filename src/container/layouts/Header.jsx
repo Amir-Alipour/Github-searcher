@@ -38,13 +38,13 @@ function Header() {
 
                 <div className="flex items-center">
                     <Link
-                        to="/"
+                        to="/Github-searcher"
                         className="px-6 text-gray-300 font-medium hover:text-gray-500 cursor-pointer"
                     >
                         Home
                     </Link>
 
-                    <Link to="/about/me" className="hidden md:block text-gray-300 font-medium hover:text-gray-500 cursor-pointer">
+                    <Link to="/Github-searcher/about/me" className="hidden md:block text-gray-300 font-medium hover:text-gray-500 cursor-pointer">
                         About
                     </Link>
                 </div>

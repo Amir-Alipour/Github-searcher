@@ -22,7 +22,7 @@ function OtherUserProfile({avatar, username}) {
             <div
                 className="w-full h-full rounded p-2 cursor-pointer"
                 style={{ backgroundColor: "#2d333b" }}
-                onClick={() => history.push(`/${username}`)}
+                onClick={() => history.push(`/Github-searcher/${username}`)}
             >
                 <div className="flex ">
                     <img

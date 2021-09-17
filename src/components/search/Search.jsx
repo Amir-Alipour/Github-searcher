@@ -9,7 +9,7 @@ function Search() {
 
     const handleSearch = (e) => {
         if(e.keyCode === 13) {
-            history.push(`/${username}`)
+            history.push(`/Github-searcher/${username}`)
         }
     } 
 

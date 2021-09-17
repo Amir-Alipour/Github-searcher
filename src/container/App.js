@@ -12,12 +12,12 @@ const About = lazy(() => import("../components/about/About"));
 function App() {
     return (
         <div className="App w-100 bg-gray-500">
-            <Router>
+            <Router basename={process.env.PUBLIC_URL}>
                 <Suspense fallback={<h1>Loading...</h1>}>
 
                     <Header />
 
-                    <Route path="/" exact>
+                    <Route path="/Github-searcher" exact>
                         <Search />
 
                         <Recently />
@@ -25,11 +25,11 @@ function App() {
                         <Suggest />
                     </Route>
 
-                    <Route path="/about/me">
+                    <Route path="/Github-searcher/about/me">
                         <About />
                     </Route>
 
-                    <Route exact path="/:username">
+                    <Route exact path="/Github-searcher/:username">
                         <Profile />
                     </Route>
 
