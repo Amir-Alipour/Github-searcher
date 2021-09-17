@@ -2,12 +2,12 @@
   "files": {
     "main.css": "/Github-searcher/static/css/main.14595443.chunk.css",
     "main.js": "/Github-searcher/static/js/main.f51f2084.chunk.js",
-    "runtime-main.js": "/Github-searcher/static/js/runtime-main.0e6ac4b5.js",
+    "runtime-main.js": "/Github-searcher/static/js/runtime-main.57e44ba8.js",
     "static/js/2.7f8f512c.chunk.js": "/Github-searcher/static/js/2.7f8f512c.chunk.js",
     "static/js/3.2996aee4.chunk.js": "/Github-searcher/static/js/3.2996aee4.chunk.js",
     "static/js/4.2b5720f5.chunk.js": "/Github-searcher/static/js/4.2b5720f5.chunk.js",
     "static/css/5.acc5729f.chunk.css": "/Github-searcher/static/css/5.acc5729f.chunk.css",
-    "static/js/5.a797c99c.chunk.js": "/Github-searcher/static/js/5.a797c99c.chunk.js",
+    "static/js/5.1535d4d7.chunk.js": "/Github-searcher/static/js/5.1535d4d7.chunk.js",
     "static/css/6.0e433876.chunk.css": "/Github-searcher/static/css/6.0e433876.chunk.css",
     "static/js/6.1d035738.chunk.js": "/Github-searcher/static/js/6.1d035738.chunk.js",
     "static/css/7.6ac0d77f.chunk.css": "/Github-searcher/static/css/7.6ac0d77f.chunk.css",
@@ -21,7 +21,7 @@
     "static/js/4.2b5720f5.chunk.js.LICENSE.txt": "/Github-searcher/static/js/4.2b5720f5.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.0e6ac4b5.js",
+    "static/js/runtime-main.57e44ba8.js",
     "static/js/2.7f8f512c.chunk.js",
     "static/css/main.14595443.chunk.css",
     "static/js/main.f51f2084.chunk.js"
